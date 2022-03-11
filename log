@@ -8,3 +8,14 @@ Fri Mar 11 19:02:10 HSP 2022:
  tests:  1|6
 total_score: 10/70
 9a60b62
+Fri Mar 11 20:12:29 HSP 2022: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaNultimos':
+exercises.c:40:25: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+     (*suma) = ((a+(n-m)),m) ;
+                         ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+808755a
