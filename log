@@ -31,3 +31,17 @@ Fri Mar 11 20:16:13 HSP 2022:
  tests:  1|6
 total_score: 10/70
 ae9313a
+Fri Mar 11 20:18:30 HSP 2022: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaNultimos':
+exercises.c:41:8: error: unused variable 'ANR' [-Werror=unused-variable]
+    int ANR = sumaN(a,n-m);
+        ^~~
+exercises.c:40:8: error: unused variable 'AN' [-Werror=unused-variable]
+    int AN = sumaN(a,n);
+        ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ea4b675
