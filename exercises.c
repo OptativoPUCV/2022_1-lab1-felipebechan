@@ -59,7 +59,9 @@ typedef struct {
 
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
+
    Persona (*vector) = (Persona *) malloc(sizeof(Persona));
+
    if (vector == NULL)
 
       exit(EXIT_FAILURE);
@@ -70,7 +72,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
       strcpy(vector->rut, rut);
       strcpy(vector->nombre, nombre);
       vector->edad = edad;
-      return vector;
+      return (vector);
    }
 }
 
@@ -82,14 +84,18 @@ un vector con capacidad `n`, reserva la memoria
 correspondiente para el arreglo con `n` datos 
 inicializados en 0 y luego retorna el vector creado.
 */
-typedef struct {
+ttypedef struct {
    int * datos; // arreglo dinámico
    int capacidad; // capacidad del arreglo
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+   Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
+   memoria->datos=(int *)calloc(n,sizeof(int *));
+   memoria->capacidad=n;
+   return memoria;
 }
+
 
 /*
 Ejercicio 5a.

@@ -80,3 +80,97 @@ Sun Mar 13 23:54:08 HSP 2022:
  tests:  3|4
 total_score: 30/70
 651cb73
+Sun Mar 13 23:55:19 HSP 2022: 
+ exercises.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c:87:10: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'struct'
+ ttypedef struct {
+          ^~~~~~
+exercises.c:92:1: error: unknown type name 'Vector'
+ Vector * crearVector(int n) {
+ ^~~~~~
+exercises.c: In function 'crearVector':
+exercises.c:93:12: error: 'memoria' undeclared (first use in this function)
+    Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
+            ^~~~~~~
+exercises.c:93:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:93:28: error: expected expression before ')' token
+    Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
+                            ^
+exercises.c: At top level:
+exercises.c:105:19: error: expected declaration specifiers or '...' before 'Vector'
+ void asignarValor(Vector * v, int i, int valor) {
+                   ^~~~~~
+exercises.c:114:18: error: expected declaration specifiers or '...' before 'Vector'
+ int obtenerValor(Vector * v, int i) {
+                  ^~~~~~
+exercises.c:123:12: error: expected declaration specifiers or '...' before 'Vector'
+ void sumaV(Vector * a, Vector * b, Vector * c) {
+            ^~~~~~
+exercises.c:123:24: error: expected declaration specifiers or '...' before 'Vector'
+ void sumaV(Vector * a, Vector * b, Vector * c) {
+                        ^~~~~~
+exercises.c:123:36: error: expected declaration specifiers or '...' before 'Vector'
+ void sumaV(Vector * a, Vector * b, Vector * c) {
+                                    ^~~~~~
+exercises.c:132:45: error: expected declaration specifiers or '...' before 'Vector'
+ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+                                             ^~~~~~
+test.c: In function 'test_creaV':
+test.c:133:13: error: 'v' undeclared (first use in this function)
+     Vector *v = crearVector(size);
+             ^
+test.c: In function 'test_asignarObtenerValor':
+test.c:157:13: error: 'v' undeclared (first use in this function)
+     Vector *v = (Vector*)malloc(sizeof(Vector));
+             ^
+test.c:157:25: error: expected expression before ')' token
+     Vector *v = (Vector*)malloc(sizeof(Vector));
+                         ^
+test.c:160:5: error: implicit declaration of function 'asignarValor' [-Werror=implicit-function-declaration]
+     asignarValor(v, 0, a);
+     ^~~~~~~~~~~~
+test.c:164:13: error: implicit declaration of function 'obtenerValor' [-Werror=implicit-function-declaration]
+     int val=obtenerValor(v,0);
+             ^~~~~~~~~~~~
+test.c: In function 'test_sumaV':
+test.c:190:13: error: 'v1' undeclared (first use in this function)
+     Vector *v1 = (Vector*)malloc(sizeof(Vector));
+             ^~
+test.c:190:26: error: expected expression before ')' token
+     Vector *v1 = (Vector*)malloc(sizeof(Vector));
+                          ^
+test.c:200:13: error: 'v2' undeclared (first use in this function)
+     Vector *v2 = (Vector*)malloc(sizeof(Vector));
+             ^~
+test.c:200:26: error: expected expression before ')' token
+     Vector *v2 = (Vector*)malloc(sizeof(Vector));
+                          ^
+test.c:207:13: error: 'v3' undeclared (first use in this function)
+     Vector *v3 = (Vector*)malloc(sizeof(Vector));
+             ^~
+test.c:207:26: error: expected expression before ')' token
+     Vector *v3 = (Vector*)malloc(sizeof(Vector));
+                          ^
+test.c:211:5: error: implicit declaration of function 'sumaV' [-Werror=implicit-function-declaration]
+     sumaV(v1, v2, v3);
+     ^~~~~
+test.c: In function 'test_sumaV2':
+test.c:225:13: error: 'c' undeclared (first use in this function)
+     Vector *c = (Vector*)malloc(sizeof(Vector));
+             ^
+test.c:225:25: error: expected expression before ')' token
+     Vector *c = (Vector*)malloc(sizeof(Vector));
+                         ^
+test.c:231:5: error: implicit declaration of function 'sumaV2' [-Werror=implicit-function-declaration]
+     sumaV2(a1,a2,b1,b2,c);
+     ^~~~~~
+In file included from test.c:5:0:
+exercises.c: In function 'crearVector':
+exercises.c:97:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+cdb109c
