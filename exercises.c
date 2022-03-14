@@ -84,18 +84,14 @@ un vector con capacidad `n`, reserva la memoria
 correspondiente para el arreglo con `n` datos 
 inicializados en 0 y luego retorna el vector creado.
 */
-ttypedef struct {
+typedef struct {
    int * datos; // arreglo dinámico
    int capacidad; // capacidad del arreglo
 } Vector;
 
 Vector * crearVector(int n) {
-   Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
-   memoria->datos=(int *)calloc(n,sizeof(int *));
-   memoria->capacidad=n;
-   return memoria;
+   return NULL;
 }
-
 
 /*
 Ejercicio 5a.
