@@ -245,3 +245,9 @@ Mon Mar 14 00:02:17 HSP 2022:
  tests:  4|3
 total_score: 40/70
 5b54989
+Mon Mar 14 00:04:43 HSP 2022: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|2
+total_score: 50/70
+30c4241
