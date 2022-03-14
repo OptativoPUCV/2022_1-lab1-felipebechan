@@ -51,3 +51,20 @@ Fri Mar 11 20:18:55 HSP 2022:
  tests:  2|5
 total_score: 20/70
 f56d48c
+Sun Mar 13 23:52:28 HSP 2022: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crearPersona':
+exercises.c:62:21: error: expected ')' before '=' token
+    Persona (*vector = (Persona *) malloc(sizeof(Persona));
+                     ^
+test.c:266:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:266:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+bc5bc4d
