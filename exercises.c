@@ -90,10 +90,13 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
-   memoria->datos=(int *)calloc(n,sizeof(int *));
-   memoria->capacidad=n;
-   return memoria;
+   //
+   Vector* m=(Vector*)calloc(n,sizeof(Vector));
+   //
+   (m->datos) = (int *)calloc(n,sizeof(int *));
+   //
+   (m->capacidad) =n;
+   return (memoria);
 }
 
 
